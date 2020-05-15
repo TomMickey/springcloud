@@ -1,0 +1,24 @@
+#端口
+server:
+  port: 12000
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@127.0.0.1:${server.port}/eureka
+    #注册
+    register-with-eureka: true
+    #开启检索
+    fetch-registry: true
+
+#名称
+spring:
+  application:
+    name: springcloud-eureka
+  security:
+    basic:
+      enable: true #开启基于HTTP basic的认证
+    user:
+      name: grgbanking
+      password: grgbanking

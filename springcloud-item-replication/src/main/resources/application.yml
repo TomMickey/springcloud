@@ -1,0 +1,20 @@
+#端口
+server:
+  port: 9100
+  servlet:
+    context-path: /item
+
+#名称
+spring:
+  application:
+    name: springcloud-item
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://grgbanking:grgbanking@127.0.0.1:12000/eureka,http://com.grgbanking:com.grgbanking@127.0.0.1:13000/eureka
+    #注册
+    #开启检索
+    fetch-registry: true
+    register-with-eureka: true
