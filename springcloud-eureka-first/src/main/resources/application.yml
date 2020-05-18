@@ -1,6 +1,6 @@
 #端口
 server:
-  port: 12000
+  port: 8100
 
 #eureka
 eureka:
