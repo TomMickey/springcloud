@@ -1,0 +1,25 @@
+#配置端口
+server:
+  port: 9100
+
+#服务名
+spring:
+  application:
+    name: springcloud-gateway
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://grgbanking:grgbanking@127.0.0.1:8100/eureka
+    register-with-eureka: true #注册
+    fetch-registry: true #检索
+
+#编写路由规则
+
+zuul:
+  routes: #定义服务转发规则
+    springcloud-item: #这个名称随意取
+      path: /springcloud-item/** #配置请求url规则
+      #url: http://127.0.0.1:9000/ #真正的微服务地址
+      serviceid: springcloud-item #服务名称
