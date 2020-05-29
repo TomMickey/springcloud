@@ -9,6 +9,7 @@
         <module>springcloud-eureka-second</module>
         <module>springcloud-item-replication</module>
         <module>springcloud-order-first</module>
+        <module>springcloud-consul</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
