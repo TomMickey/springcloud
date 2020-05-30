@@ -4,6 +4,7 @@ import com.grgbanking.entity.Item;
 import com.grgbanking.entity.Order;
 import com.grgbanking.entity.OrderDetail;
 import com.grgbanking.feign.FeignClientFirst;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,7 +52,12 @@ public class OrderService {
         return order;
     }
 
+    @HystrixCommand(fallbackMethod = "getServerPortError")
     public String getServerPort(){
         return itemService.getServerPort();
+    }
+
+    public String getServerPortError(){
+        return "getServerPortError";
     }
 }
