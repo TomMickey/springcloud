@@ -11,6 +11,7 @@
         <module>springcloud-order-first</module>
         <module>springcloud-consul</module>
         <module>springcloud-gateway</module>
+        <module>springcloud-test</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
