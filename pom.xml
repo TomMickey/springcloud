@@ -12,6 +12,10 @@
         <module>springcloud-consul</module>
         <module>springcloud-gateway</module>
         <module>springcloud-test</module>
+        <module>echo-server</module>
+        <module>echo-client</module>
+        <module>netty-demo</module>
+        <module>springcloud-aop</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
