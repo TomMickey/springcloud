@@ -14,7 +14,6 @@
         <module>springcloud-test</module>
         <module>echo-server</module>
         <module>echo-client</module>
-        <module>netty-demo</module>
         <module>springcloud-aop</module>
     </modules>
     <parent>

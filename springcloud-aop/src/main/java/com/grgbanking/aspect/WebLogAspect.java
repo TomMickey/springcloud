@@ -14,9 +14,9 @@ import java.util.Arrays;
 
 @Component
 @Aspect
-public class WebLogAcpect {
+public class WebLogAspect {
 
-    private Logger logger = LoggerFactory.getLogger(WebLogAcpect.class);
+    private Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
 
     /**
      * 定义切入点，切入点为com.example.aop下的所有函数
