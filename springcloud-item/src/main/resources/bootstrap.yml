@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:7788/  #配置中心的地址
+      profile: dev #对应配置服务中的{profile}
+      label: master #对应的分支

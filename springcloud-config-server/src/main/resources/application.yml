@@ -1,0 +1,35 @@
+server:
+  port: 7788 #服务端口
+
+#配置
+spring:
+  application:
+    name:  springcloud-config-server #指定服务名
+  cloud:
+    #配置consul
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        health-check-path: /health
+        health-check-interval: 5s
+    config:
+      server:
+        git: #配置git仓库地址
+          uri: https://github.com/TomMickey/springcloud-config.git
+          search-paths:
+            - springcloud-config		#配置文件目录地址
+          username: TomMickey	#码云账号（公有项目不需要设置）
+          password: m86xxx 	#码云密码（公有项目不需要设置）
+      label: master	#分支名称
+
+#eureka服务配置
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://grgbanking:grgbanking@127.0.0.1:8100/eureka
+#    register-with-eureka: true
+#    fetch-registry: true
+#  instance:
+#    prefer-ip-address: true #将自己的ip地址注册到eureka服务中心
+#    instance-id: ${spring.application.name}###${server.port}

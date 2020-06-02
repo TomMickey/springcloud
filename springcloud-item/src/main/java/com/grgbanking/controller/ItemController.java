@@ -1,6 +1,7 @@
 package com.grgbanking.controller;
 
 import com.grgbanking.entity.Item;
+import com.grgbanking.entity.JdbcConfigBean;
 import com.grgbanking.entity.Test;
 import com.grgbanking.entity.User;
 import com.grgbanking.service.ItemService;
@@ -22,6 +23,9 @@ public class ItemController {
     @Autowired
     private User user;
 
+    @Autowired
+    private JdbcConfigBean jdbcConfigBean;
+
     @RequestMapping("/getItemById/{id}")
     public Item getItemById(@PathVariable("id") Long id){
         return itemService.queryItemById(id);
@@ -31,6 +35,7 @@ public class ItemController {
     public String getServerPort(){
         System.out.println("======");
         System.out.println(user);
+        System.out.println(jdbcConfigBean);
         return "127.0.0.1:" + this.port;
     }
 
