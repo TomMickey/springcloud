@@ -16,6 +16,9 @@
         <module>echo-client</module>
         <module>springcloud-aop</module>
         <module>springcloud-config-server</module>
+        <module>springcloud-zookeeper</module>
+        <module>rabbitMQ-demo</module>
+        <module>springcloud-netty</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,0 +1,11 @@
+#端口
+server:
+  port: 14000
+
+#名称
+spring:
+  application:
+    name: springcloud-zookeeper
+  cloud:
+    zookeeper:
+      connect-string: 192.168.44.3:2181
