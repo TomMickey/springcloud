@@ -1,0 +1,12 @@
+#端口
+server:
+  port: 9999
+
+#数据库配置
+#MYSQL链接
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.44.4:3306/first
+    username: root
+    password: 1234

@@ -1,0 +1,8 @@
+#配置用户
+spring:
+  security:
+    user:
+      password: 1234
+      name: lzy
+
+#端口

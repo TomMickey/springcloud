@@ -6,26 +6,35 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Component
 public class DiscardServer {
-    @Resource
+
+    @Autowired
     private ChildChannelHandler childChannelHandler;
-    public void run(int port) throws Exception {
+
+    @Autowired
+    BaseService baseService;
+
+    @PostConstruct
+    public void run() throws Exception {
+        //baseService.test();
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        System.out.println("准备运行端口：" + port);
         try {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 128)
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS,5000)
                     .childHandler(childChannelHandler);
             //绑定端口，同步等待成功
-            ChannelFuture f = bootstrap.bind(port).sync();
+            ChannelFuture f = bootstrap.bind(12000).sync();
             //等待服务监听端口关闭
             f.channel().closeFuture().sync();
         } finally {

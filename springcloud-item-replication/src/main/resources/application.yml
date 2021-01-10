@@ -18,3 +18,7 @@ eureka:
     #开启检索
     fetch-registry: true
     register-with-eureka: true
+
+my:
+  test:
+    qwe: 505005

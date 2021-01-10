@@ -8,16 +8,21 @@ import java.net.Socket;
 public class TestNetty {
 
     public static void main(String[] args){
-        try {
-            Socket socket=new Socket("localhost",8888);
-            OutputStream outputStream = socket.getOutputStream();
-            PrintWriter printWriter=new PrintWriter(outputStream);
-            printWriter.write("$tmb00035ET3318/08/22 11:5804029.94,027.25,20.00,20.00$");
-            printWriter.flush();
-            socket.shutdownOutput();
-            socket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        for(int i = 0; i < 100000; i++){
+            try {
+                Socket socket=new Socket("192.168.44.4",12000);
+                OutputStream outputStream = socket.getOutputStream();
+                PrintWriter printWriter = new PrintWriter(outputStream);
+                printWriter.write("Test");
+                printWriter.flush();
+                //Thread.sleep(1000);
+                printWriter.write("sleep threads!");
+                printWriter.flush();
+                socket.shutdownOutput();
+                socket.close();
+            } catch (IOException  e) {
+                e.printStackTrace();
+            }
         }
     }
 }

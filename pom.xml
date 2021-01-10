@@ -19,6 +19,15 @@
         <module>springcloud-zookeeper</module>
         <module>rabbitMQ-demo</module>
         <module>springcloud-netty</module>
+        <module>springcloud-netty-hello</module>
+        <module>spring-test</module>
+        <module>spring-nginx</module>
+        <module>spring-mybatis-plus</module>
+        <module>spring-annotation</module>
+        <module>springboot-security</module>
+        <module>springcloud-phoeinx</module>
+        <module>springcloud-excel</module>
+        <module>springcloud-nacos</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

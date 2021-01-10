@@ -26,10 +26,10 @@
     <dependencies>
 
         <!--springboot 整合consul客户端-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

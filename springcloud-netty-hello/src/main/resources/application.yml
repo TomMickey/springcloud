@@ -1,0 +1,10 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /test
+
+netty:
+  port: 10000
+
+fileserver:
+  rootdir: D:\test

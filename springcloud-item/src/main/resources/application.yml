@@ -9,37 +9,37 @@ spring:
   application:
     name: springcloud-item
   cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-      discovery:
-        health-check-interval: 5s
-        health-check-path: /item/health
+#    consul:
+#      host: 127.0.0.1
+#      port: 8500
+#      discovery:
+#        health-check-interval: 5s
+#        health-check-path: /item/health
     #配置springcloud-config
-    config:
-      name: ${spring.application.name}
-      profile: dev
-      label: master
-      discovery:
-        service-id: springcloud-config-server #指定配置中心工程的名称
-        enabled: true #启用发现服务器
+#    config:
+#      name: ${spring.application.name}
+#      profile: dev
+#      label: master
+#      discovery:
+#        service-id: springcloud-config-server #指定配置中心工程的名称
+#        enabled: true #启用发现服务器
 #  cloud:
 #    zookeeper:
 #      connect-string: 192.168.44.3:2181
 
 #eureka
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://grgbanking:grgbanking@127.0.0.1:8100/eureka,http://com.grgbanking:com.grgbanking@127.0.0.1:13000/eureka
-#    #注册
-#    #开启检索
-#    fetch-registry: true
-#    register-with-eureka: true
-  #instance:
-    #prefer-ip-address: true #将自己的ip注册到eureka服务中
-    #ip-address: 127.0.0.1
-    #instance-id: ${spring.application.name}###${server.port} #指定实例id
+eureka:
+  client:
+    service-url:
+      defaultZone: http://grgbanking:grgbanking@127.0.0.1:8100/eureka,http://com.grgbanking:com.grgbanking@127.0.0.1:13000/eureka
+    #注册
+    #开启检索
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true #将自己的ip注册到eureka服务中
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}###${server.port} #指定实例id
 
 #开启所有的端点
 management:

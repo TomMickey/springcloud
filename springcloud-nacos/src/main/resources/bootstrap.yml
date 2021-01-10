@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: lzy-test
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.44.8:8848
+        group: DEFAULT_GROUP
+        file-extension: properties
+      discovery:
+        server-addr: 192.168.44.8:8848,192.168.44.7:8848,192.168.44.9:8848
+  profiles:
+    active: dev

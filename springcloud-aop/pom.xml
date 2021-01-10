@@ -12,11 +12,6 @@
     <artifactId>springcloud-aop</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.grgbanking</groupId>
-            <artifactId>springcloud-item</artifactId>
-            <version>4.0.0</version>
-        </dependency>
     </dependencies>
 
 
